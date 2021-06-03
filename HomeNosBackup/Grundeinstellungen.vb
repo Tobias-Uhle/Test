@@ -16,11 +16,11 @@ Public Class Grundeinstellungen
 
         ausgabe = verzeichnisname & vbCrLf & Anzahleingabe.Text & vbCrLf & "nxtbckup°"
 
-        If Not My.Computer.FileSystem.FileExists(configort & "config.txt") Then
-            System.IO.File.AppendAllText(configort & "config.txt", ausgabe)
+        If Not My.Computer.FileSystem.FileExists(configort & "configuration.txt") Then
+            System.IO.File.AppendAllText(configort & "configuration.txt", ausgabe)
         Else
-            My.Computer.FileSystem.DeleteFile(configort & "config.txt")
-            System.IO.File.AppendAllText(configort & "config.txt", Verzeichnis.Text & vbCrLf & Anzahleingabe.Text & vbCrLf & nxtdatum)
+            My.Computer.FileSystem.DeleteFile(configort & "configuration.txt")
+            System.IO.File.AppendAllText(configort & "configuration.txt", Verzeichnis.Text & vbCrLf & Anzahleingabe.Text & vbCrLf & nxtdatum)
         End If
 
 

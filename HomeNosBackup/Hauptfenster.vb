@@ -27,7 +27,7 @@ Public Class Hauptfenster
         End If
 
 
-        If Dir(configort & "config.txt") = "" Then
+        If Dir(configort & "configuration.txt") = "" Then
 
             Grundeinstellungen.ShowDialog()
             'MsgBox("okay")
@@ -36,7 +36,7 @@ Public Class Hauptfenster
             Backupzahl = CInt(Grundeinstellungen.Backupzahl)
         Else
 
-            config = My.Computer.FileSystem.ReadAllText(configort & "config.txt", System.Text.Encoding.UTF8).Split(vbCrLf)
+            config = My.Computer.FileSystem.ReadAllText(configort & "configuration.txt", System.Text.Encoding.UTF8).Split(vbCrLf)
 
             index = 0
             For Each x As String In config
@@ -266,7 +266,7 @@ Public Class Hauptfenster
         My.Computer.FileSystem.DeleteFile(configort & "backuplist.txt")
         IO.File.WriteAllLines(configort & "backuplist.txt", backuplisteneu)
 
-        Configuration = My.Computer.FileSystem.ReadAllText(configort & "config.txt", System.Text.Encoding.UTF8).Split(vbCrLf)
+        Configuration = My.Computer.FileSystem.ReadAllText(configort & "configuration.txt", System.Text.Encoding.UTF8).Split(vbCrLf)
         index = 0
         For Each x As String In Configuration
 
@@ -278,8 +278,8 @@ Public Class Hauptfenster
 
         Configuration(2) = "nxtbckup°" & Format(Datum.Value, "yyyyMMdd")
 
-        My.Computer.FileSystem.DeleteFile(configort & "config.txt")
-        IO.File.WriteAllLines(configort & "config.txt", Configuration)
+        My.Computer.FileSystem.DeleteFile(configort & "configuration.txt")
+        IO.File.WriteAllLines(configort & "configuration.txt", Configuration)
 
 
 
