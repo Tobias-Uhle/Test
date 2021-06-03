@@ -1,0 +1,3 @@
+Speicherort
+Anzahl von Backups
+nächstes Backup
