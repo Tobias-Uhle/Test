@@ -171,7 +171,7 @@ Public Class Hauptfenster
                 End If
             Next
         Else
-            MsgBox("Pfad nicht gefunden!")
+            MsgBox("Pfad nicht gefunden Bitte einen gültigen Pfad auswählen!")
             Exit Sub
         End If
 
